@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>coromix</title>
+    <meta name="description" content="coromix">
+    <meta name="author" content="AC">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div style="padding-top:2rem">
+            <h1>Coromix</h1>
+            <div class="row">
+                <div class="col-6">
+                    <h2 style="padding-top:2rem" class="text-align-center">{{titoloCanzone}}</h2>
+                    <div style="padding-top:2rem">
+                        <div class="row justify">
+                            <video id="direttore" muted ontimeupdate="updateTime(this)" onloadedmetadata="updateEnd()"></video>
+                        </div>
+                    </div>
+                    <div style="padding-top:2rem">
+                        <div class="row justify">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-5">
+                                <label for="range" id="start-label" class="float-left">00.00</label>
+                                <label for="range" id="end-label" class="float-right">end</label>
+                                <input type="range" class="custom-range" id="timer" onmousedown="pause()"
+                                    onchange="calculateCurrentTime(this)">
+                                <label for="range" id="time-label" class="float-left">00.00</label>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top:2rem">
+                        <div class="row justify">
+                            <button type="button" class="btn btn-success" onclick="play()">Play</button>
+                            &nbsp;
+                            <button type="button" class="btn btn-warning" onclick="pause()">Pause</button>
+                            &nbsp;
+                            <button type="button" class="btn btn-danger" onclick="stop()">Stop</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div style="padding:2rem 0">
+                        <!-- Traccia-->
+                        <div class="row justify">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-4">
+                                <h3>{{trackName}} </h3>
+                            </div>
+                            <div class="col-5">
+                                <button class="btn btn-outline-warning shadow-none mute"
+                                    onclick="mute(this)">Mute</button>
+                                <button class="btn btn-outline-danger shadow-none solo"
+                                    onclick="solo(this)">Solo</button>
+                                <audio id="{{trackName}}">
+                                </audio>
+                            </div>
+                        </div>
+                        <!-- Fine Traccia-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/preload-it"></script>
+        <script src="js/scripts.js"></script>
+</body>

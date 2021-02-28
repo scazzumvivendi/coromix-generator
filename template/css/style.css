@@ -1,0 +1,27 @@
+audio {
+    display: none;
+}
+
+.mute-active {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.solo-active {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.container{
+    display:none;
+}
