@@ -124,7 +124,7 @@ function getTraccia() {
 
 async function getTemplate() {
 
-    const promises = await Promise.all([fetch('../template/js/scripts.js'), fetch('../template/index.html'), fetch('../template/css/style.css'), fetch('../template/css/bootstrap.min.css')]);
+    const promises = await Promise.all([fetch('template/js/scripts.js'), fetch('template/index.html'), fetch('template/css/style.css'), fetch('template/css/bootstrap.min.css')]);
 
     const jsTemplate = await promises[0].text();
     const htmlTemplate = await promises[1].text();
