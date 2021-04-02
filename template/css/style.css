@@ -25,3 +25,16 @@ audio {
 .container{
     display:none;
 }
+
+.loader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+}
+
+body{
+    height:100vh;display:flex;
+}
